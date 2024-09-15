@@ -35,17 +35,28 @@
     <script>
         document.getElementById('items-2').addEventListener('click', function(event){
             console.log("Clicked li items-2");
-            event.stopPropagation()
+            // event.stopPropagation()
+            event.stopImmediatePropagation();
         })
+        document.getElementById('items-2').addEventListener('click', function(){
+            console.log("Clicked li second items-2");
+        })
+        document.getElementById('items-2').addEventListener('click', function(){
+            console.log("Clicked li third items-2");
+        })
+        document.getElementById('items-2').addEventListener('click', function(){
+            console.log("Clicked li Fourth items-2");
+        })
+
+        //  show propagation()
         document.getElementById('item1').addEventListener('click', function(){
             console.log("clicked ul section ")
         })
         document.getElementById("body").addEventListener("click", function(){
             console.log("clicked all body section");
         })
-        document.getElementById('section').addEventListener('click', function (parameter){
+        document.getElementById('section').addEventListener('click', function (){
             console.log('clicked section statement');
-            parameter.stopPropagation()
         })
     </script>
 </body>
